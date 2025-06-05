@@ -1,52 +1,60 @@
-# Development server
+Este projeto é uma aplicação full stack com Java (Spring Boot) no backend e Angular no frontend, que permite realizar operações de cadastro, listagem, edição e exclusão de produtos.
+Tecnologias Utilizadas
+    • Backend:
+    • Java 17
+    • Spring Boot 3
+    • Spring Data JPA
+    • H2 Database (em memória)
+    • Frontend:
+    • Angular 17+
+    • TypeScript
+    • Bootstrap (opcional)
+Como Executar
+Backend (Spring Boot)
+    • Pré-requisitos:
+    • Java 17+
+    • Maven instalado
+Clonar e rodar o backend:
 
-To start a local development server, run:
+git clone https://github.com/mylene10gois/crud-produtos-springboot.git
+cd crud-produtos-springboot
+mvn spring-boot:run
 
-```bash
+    • Acesso:
+    • API REST: http://localhost:8080/produtos
+    • Console do banco H2: http://localhost:8080/h2-console
+    • JDBC URL: jdbc:h2:mem:produtosdb
+    • Usuário: sa
+    • Senha: (deixe em branco)
+Frontend (Angular)
+    • Pré-requisitos:
+    • Node.js 18+
+    • Angular CLI instalado (npm install -g @angular/cli)
+Clonar e rodar o frontend:
+
+git clone https://github.com/mylene10gois/frontend-angular-produtos
+cd frontend-angular-produtos
+npm install
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`.
+Acesso: http://localhost:4200
+Certifique-se de que o backend esteja rodando em http://localhost:8080 antes de acessar o frontend.
+Funcionalidades
+    • Cadastrar novo produto
+    • Listar produtos com tabela dinâmica
+    • Editar produto
+    • Excluir produto
+    • Paginação no backend (Pageable)
+Estrutura dos Diretórios
 
-# Code scaffolding
+crud-produtos-springboot/
+└── Backend Spring Boot
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+crud-produtos-frontend/
+└── Frontend Angular
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. 
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-# Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
+Autoria
+Desenvolvido por Mylene como parte de um desafio técnico full stack.
 
 
 
